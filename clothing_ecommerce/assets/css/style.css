@@ -1,0 +1,602 @@
+/* General styles */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #555;
+}
+
+main {
+  flex: 1;
+}
+
+footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+h2,
+h3 {
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("https://wallpapers.com/images/featured/clothes-background-ot7pkynbf8g28jsr.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  text-align: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2,
+.hero p {
+  color: #fff;
+}
+
+.hero h2 {
+  font-size: 3em;
+  margin: 0 0 20px;
+}
+
+.hero p {
+  font-size: 1.5em;
+  margin: 0 0 20px;
+}
+
+/* Featured Categories */
+.featured-categories {
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.category-item {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  margin: 0;
+}
+
+#category-men {
+  background-image: url("https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/c49ccc7e3f5d2601734413c87cdf619c.jpg");
+}
+
+#category-women {
+  background-image: url("https://www.rollingstone.com/wp-content/uploads/2024/01/Best-Sites-for-Womenswear-15-Gap-1.jpg");
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+}
+
+.category-content {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.category-content h3 {
+  font-size: 2em;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.category-content .btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.category-content .btn:hover {
+  background-color: #ddd;
+}
+
+#category-men .category-content {
+  align-items: flex-start;
+}
+
+#category-women .category-content {
+  align-items: flex-end;
+}
+
+/* Featured Products */
+.featured-products {
+  margin: 50px 0;
+}
+
+.featured-products .container {
+  text-align: center;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.product,
+.product-detail {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 300px;
+  text-align: center;
+  margin: 20px;
+}
+
+.product img,
+.product-detail img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0;
+}
+
+.product .content,
+.product-detail .content {
+  padding: 20px;
+}
+
+.product h3,
+.product-detail h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.product p,
+.product-detail p {
+  font-size: 1em;
+  margin-bottom: 15px;
+}
+
+.product .btn,
+.product-detail .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.product .btn:hover,
+.product-detail .btn:hover {
+  background-color: #555;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 15px;
+  text-align: left;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+td {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+/* Form Styles */
+form {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #000;
+  text-align: center;
+}
+
+form input,
+form textarea,
+form select,
+form button {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+form select {
+  appearance: none;
+  background: url("data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNjY2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDE1LjQxNGwtNC41NzUtNC41NzVMMTIgMTAuMzAxbDQuNTc1IDQuNTc1LS44MTcuODE2eiIvPjwvc3ZnPg==")
+    no-repeat right center;
+}
+
+form button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #555;
+}
+
+form input[type="file"] {
+  padding: 3px;
+  background-color: #fff;
+}
+
+form input[type="file"]::file-selector-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+form input[type="file"]::file-selector-button:hover {
+  background-color: #555;
+}
+
+/* Admin Dashboard Styles */
+.admin-dashboard {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.admin-dashboard h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.admin-dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.admin-dashboard th,
+.admin-dashboard td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-dashboard th {
+  background-color: #333;
+  color: #fff;
+}
+
+.admin-dashboard td {
+  background-color: #fff;
+  color: #333;
+}
+
+.admin-dashboard td img {
+  max-width: 100px; /* Limit image width */
+  height: auto;
+  border-radius: 10px;
+}
+
+.admin-dashboard .btn {
+  padding: 8px 15px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.admin-dashboard .btn:hover {
+  background-color: #555;
+}
+
+.admin-dashboard .action-btns {
+  display: flex;
+  gap: 10px;
+}
+
+/* Add this to your style.css if not already present */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Product Detail Page */
+.product-detail {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.product-detail .product-images {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-detail .product-images img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-detail .product-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-detail .product-info h2 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.product-detail .product-info .price {
+  font-size: 1.8em;
+  color: #e74c3c;
+  margin: 10px 0;
+}
+
+.product-detail .product-info p {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+.product-detail .product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-detail .product-form label {
+  font-size: 1.2em;
+}
+
+.product-detail .product-form select,
+.product-detail .product-form input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.product-detail .product-form button {
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.admin-product-img {
+  max-width: 50px;
+}
+
+/* Payment Page Styles */
+.payment-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h2 {
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  text-align: center;
+}
+
+.payment-container .order-summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.payment-container .order-summary-table th,
+.payment-container .order-summary-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.payment-container .order-summary-table th {
+  background-color: #333;
+  color: #fff;
+}
+
+.payment-container .order-summary-table td {
+  background-color: #fff;
+  color: #333;
+}
+
+.payment-container .payment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-container .payment-form label {
+  font-size: 1.2em;
+}
+
+.payment-container .payment-form input[type="text"],
+.payment-container .payment-form input[type="number"],
+.payment-container .payment-form input[type="date"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.payment-container .payment-form button {
+  padding: 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.payment-icons img {
+  width: 40px;
+  height: auto;
+}
